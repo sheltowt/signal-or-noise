@@ -1,0 +1,25 @@
+{
+  "name": "SignalorNoise",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node web.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pauldwyer/signal-or-noise.git"
+  },  
+  "dependencies": {
+    "express": ">=3.3.4",
+    "jade": "*",
+    "stylus": "*",
+    "mongoose": "*",    
+    "mongodb": "*",
+	"mailgun-js": "*",
+	"connect-flash": "*"
+  },
+  "engines": {
+    "node": ">=0.10.12",
+    "npm": ">=1.2.30"
+  }
+}

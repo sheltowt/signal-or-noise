@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') About
+            li
+              a(href='/contact') Contact
+  .container
+    #banner.page-header
+      .row
+        h1 Signal &#124; Noise
+        p.lead How many reviews are enough?
+        .bsa.well
+          #bsap_1277971.bsarocks.bsap_c466df00a3cd5ee8568b5c4983b6bb19
+            .row-fluid
+              img#sufficiency(src='/images/sufficiency.gif')
+            .row-fluid
+              .form-actions            
+                a.btn.btn-large.btn-success(href='/demo') Demo ...
+        .row-fluid
+          .col-sm-6
+            h4 Reader ratings of "helpful" peak:
+            img#helpful(src='/images/helpful.gif')
+            p After a certain point readers consistently assess reviews to be less helpful. This may be the point were existing reviews reach sufficiency. 
+          .col-sm-6
+            h4 Consumer satisfaction minimizes:
+            img#satisfaction(src='/images/satisfaction.gif')
+            p At the approximate point where &lsquo;helpful&rsquo; peaks, customer satisfaction seems to minimize. When the entity being reviewed is sufficiently portrayed, the proper market begins to be exclusively attracted and satisfaction rises.
+            
+    hr
+    .footer
+      div &#169; Artistic Analytics #{+new Date().getFullYear()}
+
+  script(src='http://bootswatch.com/bower_components/jquery/jquery.min.js').
+  script(src='http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js').
+  script(src='http://bootswatch.com/assets/js/bootswatch.js').
+

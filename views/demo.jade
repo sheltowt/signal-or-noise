@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+          a.navbar-brand(href='../') signal &#124; noise
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') About
+            li
+              a(href='/contact') Contact
+
+  hr      
+      
+  .footer
+    div &#169; Artistic Analytics #{+new Date().getFullYear()}
+        
+  script(src='http://bootswatch.com/bower_components/jquery/jquery.min.js').
+  script(src='http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js').
+  script(src='http://bootswatch.com/assets/js/bootswatch.js').        

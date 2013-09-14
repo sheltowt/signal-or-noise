@@ -1,0 +1,83 @@
+extends layout
+
+block content
+  .navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+          a.navbar-brand(href='../') signal &#124; noise
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') About
+            li
+              a(href='/contact') Contact
+
+  .container
+    .row
+      .col-lg-12
+        .page-header
+          h1#forms Contact Us:
+    .row
+      .col-sm-12
+        .well
+          .form-horizontal
+            form#contact-form(action='/contact', method='post')
+              fieldset
+                .row
+                  .col-sm-6                
+                    .form-group
+                      label.control-label(for='inputName') Name*
+                      input#inputName.form-control(type='text', placeholder='Name')
+                    .form-group
+                      label.control-label(for='inputEmail') Email*
+                      input#inputEmail.form-control(type='text', placeholder='Email')
+                    .form-group
+                      label.control-label(for='inputSubject') Subject*
+                      input#inputSubject.form-control(type='text', placeholder='Subject')
+                  .col-sm-4
+                    .headline
+                      h3 Contact Info:
+                      ul.unstyled.who.margin-bottom-20
+                        li
+                          a(href='#')
+                            i.icon-envelope-alt
+                            | lets.talk@artisticanalytics.com
+                        li
+                          a(href='#')
+                            i.icon-globe
+                            | http://www.artisticanalytics.com
+                    .headline
+                      h3 Stay Connected:
+                      .social_icons
+                        ul.social-icons(style='list-style-type: none;')
+                          li
+                            a(href='https://twitter.com/artisticanalytics')
+                              img#twitter(src='/images/twitter_bird.png', alt='')
+                              img#facebook(src='/images/facebook.png', alt='')
+                              img(src='/images/pinterest.png', alt='')
+                 .row
+                  .col-sm-10
+                    .form-group
+                      label.control-label(for='textBody') Body*
+                      textarea#textBody.form-control(rows='3')
+                      .checkbox
+                        label
+                          input#ContactForm_check.honeypot(name='ContactForm[check]', type='checkbox')
+                          | Check if you're a spambot
+                    .form-group
+                      .col-sm-offset-6
+                        button.btn.btn-primary(type='submit', name='yt0') Send
+                        &nbsp;
+                        button.btn(type='reset', name='yt1') Reset
+
+    .row-fluid.footer
+      hr
+      div &#169; Artistic Analytics #{+new Date().getFullYear()}
+      
+  script(src='http://bootswatch.com/bower_components/jquery/jquery.min.js').
+  script(src='http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js').
+  script(src='http://bootswatch.com/assets/js/bootswatch.js').
+    
